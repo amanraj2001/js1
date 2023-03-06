@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is js practice 5</h1>
+    <div style="display: flex; flex-direction: column ; width: fit-content; margin: 5px 2px;">
+        string : <input type="text" id="int">
+        
+        Extract from : <input type="number" class="ext">
+        to: <input type="number" class="to">
+    </div>
+
+    <div>
+         <button onclick="p5()">click</button>
+    </div>
+    <div>
+        <h3 id="one"></h3>
+    </div>
+
+    <script>
+        
+        function p5(){
+
+            var str= document.querySelector('input').value
+            var ext1 = document.querySelector('.ext').value
+            var t = document.querySelector('.to').value
+            var x = str.slice(ext1,t);
+
+
+            document.getElementById('one').innerHTML=x
+        }
+
+
+    </script>
+</body>
+</html>

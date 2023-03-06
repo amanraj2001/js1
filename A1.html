@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Basic maths operation using js</h2>
+    <form style="display: flex; flex-direction: column; padding: 4px;width: fit-content;" id="form">
+        <label for="num1">Enter first number</label>
+        <input type="text" class="n1" id="N1">
+        <label for="num2">Enter second number</label>
+        <input type="text" class="n2" id="N2">
+        <div  style=" margin-top: 2px;">
+            <h3>Select the operation to be performed</h3>
+
+            <label for="add">Addition</label>
+            <input type="radio" name="add" id="add" onclick="add1()">
+            <label for="sub">Subtraction</label>
+            <input type="radio" name="add" id="sub" onclick="sub1()">
+            <label for="mul">Multiplication</label>
+            <input type="radio" name="add" id="mul" onclick="mul1()">
+            <label for="div">Division</label>
+            <input type="radio" name="add" id="div" onclick="div1()">
+        </div>
+    </form>
+
+    <button onclick="a1()" style="margin-top: 4px;">Calculate</button>
+    <button onclick="r1()">Reset</button>
+    <h2 id="one"></h2>
+
+    <script>
+        
+        function a1() {
+            var n1 = document.querySelector('.n1').value
+            var n2 = document.querySelector('.n2').value
+            
+            document.getElementById('one').innerHTML = t;
+            
+        }
+        function mul1(){
+            var n1 = N1.value;
+            var n2 = N2.value;
+            sum = Number(n1)*Number(n2);
+            t ="The multipication of two number is "+sum
+        }
+
+        function div1(){
+            var n1 = N1.value;
+            var n2 = N2.value;
+            sum = Number(n1)/Number(n2);
+            t  = "The division of twp number is "+sum;
+        }
+        var sum = 0;
+        function add1() {
+            var n1 = document.querySelector('.n1').value
+            var n2 = document.querySelector('.n2').value
+            sum = Number(n1) + Number(n2);
+            t="The addition of two number is "+sum
+        }
+        function sub1() {
+            var n1 = document.querySelector('.n1').value
+            var n2 = document.querySelector('.n2').value
+            // var sum = 0;
+            sum = Number(n1) - Number(n2);
+            t="The subbtraction of two number is "+sum
+        }
+
+        function r1(){
+            document.getElementById('form').reset();
+            document.getElementById('one').innerHTML='';
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
